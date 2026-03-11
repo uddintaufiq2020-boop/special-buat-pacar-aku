@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Peranika Cahya</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --bg-1: #160913;
+      --bg-2: #2b1021;
+      --bg-3: #5c2945;
+      --pink-1: #ffd7e8;
+      --pink-2: #f5b7d1;
+      --pink-3: #f59cc0;
+      --rose: #da5d92;
+      --rose-deep: #b84579;
+      --gold: #f4d59a;
+      --gold-soft: rgba(244, 213, 154, 0.18);
+      --paper: #fff8fb;
+      --text: #fff8fc;
+      --muted: #f4dbe6;
+      --ink: #6b3550;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      --radius: 30px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at top left, rgba(255, 189, 220, 0.15), transparent 26%),
+        radial-gradient(circle at top right, rgba(244, 213, 154, 0.12), transparent 22%),
+        radial-gradient(circle at bottom center, rgba(255, 143, 194, 0.13), transparent 24%),
+        linear-gradient(145deg, var(--bg-1), var(--bg-2) 42%, #1f0b17 100%);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,0.11) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 72% 18%, rgba(255,255,255,0.08) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 85% 65%, rgba(255,255,255,0.08) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 15% 78%, rgba(255,255,255,0.08) 0 1px, transparent 1.6px);
+      background-size: 240px 240px;
+      opacity: .55;
+      z-index: 0;
+    }
+
+    .aurora, .aurora-2 {
+      position: fixed;
+      filter: blur(55px);
+      opacity: .5;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 999px;
+      animation: floatBlob 14s ease-in-out infinite alternate;
+    }
+
+    .aurora {
+      width: 320px; height: 320px;
+      top: -60px; left: -70px;
+      background: rgba(245, 156, 192, .22);
+    }
+
+    .aurora-2 {
+      width: 340px; height: 340px;
+      right: -80px; bottom: 2vh;
+      background: rgba(244, 213, 154, .15);
+      animation-duration: 18s;
+    }
+
+    @keyframes floatBlob {
+      from { transform: translateY(0px) translateX(0px) scale(1); }
+      to { transform: translateY(26px) translateX(10px) scale(1.08); }
+    }
+
+    .petals {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .petal {
+      position: absolute;
+      top: -40px;
+      font-size: 16px;
+      opacity: .82;
+      animation: petalFall linear forwards;
+      filter: drop-shadow(0 8px 12px rgba(255, 126, 182, 0.25));
+    }
+
+    @keyframes petalFall {
+      0% {
+        transform: translate3d(0, -5vh, 0) rotate(0deg) scale(.8);
+        opacity: 0;
+      }
+      15% { opacity: .85; }
+      100% {
+        transform: translate3d(30px, 115vh, 0) rotate(240deg) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .section {
+      min-height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      padding: 22px;
+    }
+
+    .section.active {
+      display: flex;
+      animation: fadeUp .9s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px) scale(.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .shell {
+      width: min(1140px, 100%);
+      position: relative;
+    }
+
+    .lux-card {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .lux-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.14), transparent 40%, rgba(255,255,255,.04)),
+        radial-gradient(circle at top right, rgba(244, 213, 154, .13), transparent 24%);
+    }
+
+    .ornament {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border: 1px solid rgba(244,213,154,.26);
+      border-radius: 50%;
+      top: -40px;
+      right: -30px;
+      opacity: .7;
+    }
+
+    .ornament::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.13);
+      color: var(--gold);
+      font-size: .85rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "✦";
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.2rem, 5vw, 4.1rem);
+      line-height: 1.06;
+      margin: 18px 0 12px;
+      font-weight: 700;
+    }
+
+    .script {
+      font-family: "Great Vibes", cursive;
+      color: var(--pink-1);
+      font-weight: 400;
+      letter-spacing: .02em;
+    }
+
+    .lead {
+      max-width: 720px;
+      line-height: 1.8;
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0 auto;
+    }
+
+    .gold { color: var(--rose-deep); font-weight: 800; }
+
+    .countdown-box {
+      padding: 44px 22px;
+      text-align: center;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
+      align-items: center;
+      min-height: 72vh;
+      padding: 28px;
+    }
+
+    .count-visual {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .halo {
+      position: absolute;
+      width: min(62vw, 430px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(255, 237, 246, .22) 0%, rgba(245,156,192,.08) 42%, transparent 68%);
+      filter: blur(10px);
+      animation: pulseSoft 3.4s ease-in-out infinite;
+    }
+
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); opacity: .92; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+
+    .count-ring {
+      position: absolute;
+      inset: 50%;
+      width: min(58vw, 360px);
+      height: min(58vw, 360px);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: inset 0 0 0 10px rgba(255,255,255,.02);
+    }
+
+    .count-ring::before, .count-ring::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 50%;
+      border: 1px dashed rgba(244,213,154,.22);
+    }
+
+    .count-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(5.8rem, 18vw, 8.5rem);
+      font-weight: 700;
+      line-height: 1;
+      color: #fff7fb;
+      text-shadow: 0 0 35px rgba(245,156,192,.28);
+      position: relative;
+      z-index: 3;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(.7); opacity: .4; }
+      60% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .hero-portrait {
+      width: min(360px, 78vw);
+      aspect-ratio: 3 / 4.4;
+      object-fit: cover;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 22px 70px rgba(0,0,0,.36);
+      position: absolute;
+      bottom: -18px;
+      right: 0;
+      opacity: .95;
+      display: none;
+    }
+
+    .title-block {
+      position: relative;
+      z-index: 2;
+      text-align: left;
+      padding: 20px 6px 20px 12px;
+    }
+
+    .title-block p {
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 610px;
+    }
+
+    .shimmer-line {
+      width: min(360px, 80%);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(244,213,154,.7), transparent);
+      margin: 22px 0;
+    }
+
+    .hint {
+      color: #f7d6e7;
+      font-size: .96rem;
+      opacity: .92;
+    }
+
+    .envelope-card {
+      padding: 28px;
+      text-align: center;
+    }
+
+    .envelope-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .portrait-frame {
+      position: relative;
+      padding: 16px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      max-height: 560px;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+    }
+
+    .portrait-frame::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 24px;
+      border: 1px solid rgba(244,213,154,.16);
+      pointer-events: none;
+    }
+
+    .note-chip {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(18, 9, 19, .48);
+      color: #fff7fb;
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(6px);
+      font-size: .88rem;
+    }
+
+    .envelope-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .envelope {
+      width: min(430px, 88vw);
+      height: 285px;
+      position: relative;
+      margin: 16px auto 10px;
+      perspective: 1400px;
+      cursor: pointer;
+    }
+
+    .envelope-base {
+      position: absolute;
+      inset: 0;
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, #ffe8f1, #f8bfd6 65%, #f09dc1);
+      box-shadow: 0 24px 55px rgba(0,0,0,.25);
+      overflow: hidden;
+    }
+
+    .envelope-base::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.26), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(184, 69, 121, .18), transparent 32%);
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0; right: 0;
+      height: 59%;
+      background: linear-gradient(145deg, #ff90bb, #da5d92);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top;
+      transition: transform 1s cubic-bezier(.2,.8,.2,1);
+      z-index: 4;
+      box-shadow: inset 0 -10px 20px rgba(0,0,0,.08);
+    }
+
+    .letter {
+      position: absolute;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      width: 88%;
+      min-height: 76%;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.97), rgba(255,245,249,.98));
+      color: var(--ink);
+      padding: 26px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 20px 38px rgba(0,0,0,.18);
+      transition: transform 1s cubic-bezier(.2,.8,.2,1);
+      z-index: 2;
+      text-align: center;
+    }
+
+    .letter .script {
+      color: var(--rose-deep);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+    }
+
+    .wax {
+      position: absolute;
+      left: 50%;
+      top: 52%;
+      transform: translate(-50%, -50%);
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, #ffb7d4, #b84579 70%);
+      box-shadow: 0 10px 25px rgba(184,69,121,.35);
+      z-index: 5;
+      border: 2px solid rgba(255,255,255,.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      transition: transform .4s ease, opacity .4s ease;
+    }
+
+    .envelope.open .flap {
+      transform: rotateX(180deg);
+    }
+
+    .envelope.open .letter {
+      transform: translateX(-50%) translateY(-100px);
+    }
+
+    .envelope.open .wax {
+      transform: translate(-50%, -50%) scale(.75);
+      opacity: 0;
+    }
+
+    .tap-note {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: .95rem;
+      margin-top: 10px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      background: linear-gradient(135deg, #ec8eb6, #c85788);
+      box-shadow: 0 12px 28px rgba(200, 87, 136, .28);
+      transition: .28s ease;
+    }
+
+    .btn:hover, .btn:active {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      box-shadow: none;
+    }
+
+    .message-card {
+      padding: clamp(18px, 3vw, 32px);
+    }
+
+    .message-paper {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,250,252,.98), rgba(255,242,248,.98));
+      color: var(--ink);
+      padding: clamp(24px, 4vw, 46px);
+      box-shadow: inset 0 0 0 1px rgba(218, 93, 146, .12);
+    }
+
+    .message-paper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.24), transparent 35%),
+        repeating-linear-gradient(
+          180deg,
+          transparent,
+          transparent 32px,
+          rgba(218, 93, 146, .04) 33px,
+          rgba(218, 93, 146, .04) 34px
+        );
+      opacity: .8;
+    }
+
+    .message-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .message-paper h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 4.7vw, 3.2rem);
+      color: var(--rose-deep);
+      margin: 0 0 14px;
+      line-height: 1.05;
+    }
+
+    .message-paper .small-script {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      color: #cf6b99;
+      margin-bottom: 10px;
+    }
+
+    .message-paper p {
+      font-size: 1.04rem;
+      line-height: 1.95;
+      margin: 0 0 1.15em;
+    }
+
+    .signature {
+      margin-top: 8px;
+      color: var(--rose-deep);
+      font-weight: 800;
+      font-size: 1.02rem;
+    }
+
+    .message-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .side-photo {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 100%;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .side-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .side-photo .overlay-note {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(18,9,19,.48);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.14);
+      color: #fff8fc;
+      line-height: 1.7;
+      font-size: .95rem;
+    }
+
+    .gallery-shell {
+      padding: clamp(18px, 3vw, 30px);
+    }
+
+    .gallery-top {
+      text-align: center;
+      margin-bottom: 18px;
+      padding: 8px 4px 0;
+    }
+
+    .gallery-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .gallery-photo {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      min-height: 340px;
+    }
+
+    .gallery-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      max-height: 72vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(18,9,19,.48);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(8px);
+      color: var(--gold);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .gallery-copy {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.07));
+      border: 1px solid rgba(255,255,255,.13);
+      padding: 24px;
+    }
+
+    .gallery-copy h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 10px 0 10px;
+      line-height: 1.08;
+    }
+
+    .gallery-copy p {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1rem;
+      margin: 0 0 18px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+      margin: 18px 0 18px;
+    }
+
+    .progress > span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f0a4c5, #f4d59a);
+      transition: width .35s ease;
+    }
+
+    .page-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .thumb {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      opacity: .78;
+      transition: .24s ease;
+    }
+
+    .thumb.active {
+      border-color: rgba(244,213,154,.82);
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,.16);
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .final-card {
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .final-card p {
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .final-big {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(2.8rem, 8vw, 4.8rem);
+      color: var(--pink-1);
+      margin: 16px 0 12px;
+    }
+
+    .footer-love {
+      margin-top: 18px;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .84rem;
+    }
+
+    @media (max-width: 920px) {
+      .countdown-grid,
+      .envelope-layout,
+      .message-grid,
+      .gallery-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .title-block {
+        text-align: center;
+        padding: 6px 8px 0;
+      }
+
+      .shimmer-line {
+        margin-inline: auto;
+      }
+
+      .hero-portrait {
+        display: none;
+      }
+
+      .count-visual {
+        min-height: 330px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 14px;
+      }
+
+      .countdown-box,
+      .envelope-card,
+      .message-card,
+      .gallery-shell,
+      .final-card {
+        padding: 16px;
+      }
+
+      .countdown-grid {
+        padding: 12px;
+        min-height: auto;
+      }
+
+      .envelope {
+        height: 250px;
+      }
+
+      .envelope.open .letter {
+        transform: translateX(-50%) translateY(-82px);
+      }
+
+      .letter {
+        padding: 22px 14px;
+      }
+
+      .btn, .btn.secondary {
+        width: 100%;
+      }
+
+      .thumbs {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .page-line {
+        justify-content: center;
+      }
+
+      .message-paper p {
+        font-size: .98rem;
+      }
+
+      .gallery-photo img {
+        max-height: 52vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="aurora-2"></div>
+  <div class="petals" id="petals"></div>
+
+  <section class="section active" id="countdownSection">
+    <div class="shell">
+      <div class="lux-card countdown-box">
+        <div class="ornament"></div>
+        <div class="countdown-grid">
+          <div class="title-block">
+            <div class="eyebrow">Birthday Surprise</div>
+            <h1 class="section-title">
+              Sebuah malam yang <span class="script">spesial</span><br />
+              untuk <span class="script">Peranika Cahya</span>
+            </h1>
+            <p>
+              Ada sesuatu yang manis, hangat, dan sengaja disiapkan khusus untuk kamu.
+              Tunggu sebentar ya, sayang. Setelah hitung mundur ini selesai, akan ada surat
+              yang pelan-pelan membuka semua rasa yang selama ini ingin disampaikan.
+            </p>
+            <div class="shimmer-line"></div>
+            <div class="hint">Dibuat dengan banyak rasa sayang, banyak doa baik, dan sedikit gemas tiap kali lihat senyum kamu ✨</div>
+          </div>
+
+          <div class="count-visual">
+            <div class="halo"></div>
+            <div class="count-ring"></div>
+            <div class="count-number" id="countNumber">5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="envelopeOneSection">
+    <div class="shell">
+      <div class="lux-card envelope-card">
+        <div class="ornament"></div>
+        <div class="envelope-layout">
+          <div class="portrait-frame">
+            <img src="foto1.jpg" alt="Peranika Cahya" />
+            <div class="note-chip">the prettiest page of this story ✿</div>
+          </div>
+
+          <div class="envelope-area">
+            <div class="eyebrow">Open the first letter</div>
+            <h2 class="section-title">Untuk kamu yang selalu berhasil bikin hati ini <span class="script">tenang</span></h2>
+            <p class="lead">
+              Hari ini adalah hari lahir seseorang yang sangat berarti. Jadi bukalah surat ini
+              pelan-pelan, karena ada ucapan yang lahir dari rasa syukur paling tulus.
+            </p>
+
+            <div class="envelope" id="envelopeOne" aria-label="Buka surat pertama">
+              <div class="envelope-base"></div>
+              <div class="flap"></div>
+              <div class="letter">
+                <div class="script">Happy Birthday</div>
+                <strong>Peranika Cahya ✨</strong>
+                <small>dari seseorang yang selalu sayang sama kamu</small>
+              </div>
+              <div class="wax">💌</div>
+            </div>
+
+            <div class="tap-note">Tap suratnya untuk membuka</div>
+            <div class="btn-row" id="envelopeOneActions" style="display:none;">
+              <button class="btn" id="openMessageOneBtn">Baca Ucapan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="messageOneSection">
+    <div class="shell">
+      <div class="lux-card message-card">
+        <div class="message-grid">
+          <div class="message-paper">
+            <div class="message-inner">
+              <div class="small-script">Untuk perempuan yang spesial</div>
+              <h2>Selamat Ulang Tahun,<br />Peranika Cahya</h2>
+              <p>Selamat ulang tahun ya, sayangku <span class='gold'>Peranika Cahya</span>. Di hari spesial kamu ini, aku cuma mau bilang terima kasih karena kamu sudah hadir dalam hidup aku dan membawa banyak hal baik yang mungkin sulit dijelaskan dengan kata-kata. Kehadiran kamu bukan cuma bikin hari-hari aku jadi lebih berwarna, tapi juga bikin aku belajar tentang arti perhatian, kesabaran, dan kasih sayang yang tulus.</p><p>Kamu adalah salah satu alasan kenapa aku bisa merasa tenang, bahagia, dan punya semangat untuk menjalani semuanya. Aku doakan di usia kamu yang sekarang, semua hal baik selalu datang menghampiri kamu. Semoga kamu selalu diberi kesehatan, kebahagiaan, hati yang kuat, pikiran yang tenang, dan langkah yang dimudahkan dalam mengejar semua impian kamu.</p><p>Aku tahu hidup tidak selalu mudah, kadang capek, kadang banyak hal yang bikin overthinking, kadang juga ada masa-masa yang bikin kamu ragu sama diri sendiri. Tapi aku mau kamu ingat, kamu adalah orang yang hebat, kuat, dan berharga. Jangan terlalu keras sama diri sendiri ya. Kamu nggak harus selalu sempurna untuk jadi orang yang luar biasa.</p><p>Untuk ke depannya, aku berharap kamu tetap jadi diri kamu yang baik, hangat, dan penuh perhatian seperti sekarang. Tetap semangat ngejar apa yang kamu mau, jangan gampang menyerah kalau jalannya terasa berat, dan jangan takut buat berkembang jadi versi terbaik dari diri kamu. Kalau suatu hari keadaan lagi nggak sesuai harapan, istirahat dulu nggak apa-apa, tapi jangan berhenti. Aku ingin kamu selalu percaya bahwa setiap usaha kamu akan ada hasilnya, mungkin bukan sekarang, tapi pasti akan datang di waktu yang tepat.</p>
+              <div class="signature">Dengan banyak cinta, doa, dan rasa syukur yang nggak pernah habis 🤍</div>
+            </div>
+          </div>
+
+          <div class="side-photo">
+            <img src="foto2.JPG" alt="Kenangan bersama" />
+            <div class="overlay-note">
+              Kamu itu seperti tempat pulang yang tenang. Dan setiap kali aku melihat kamu,
+              rasanya selalu ada alasan baru untuk jatuh cinta lagi.
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn" id="toEnvelopeTwoBtn">Buka Surat Berikutnya</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="envelopeTwoSection">
+    <div class="shell">
+      <div class="lux-card envelope-card">
+        <div class="ornament"></div>
+        <div class="envelope-layout">
+          <div class="envelope-area">
+            <div class="eyebrow">One more letter</div>
+            <h2 class="section-title">Masih ada satu surat lagi, karena rasa ini rasanya nggak cukup disampaikan <span class="script">sekali</span></h2>
+            <p class="lead">
+              Yang ini isinya lebih hangat, lebih pelan, dan lebih dalam. Isinya tentang kamu,
+              tentang betapa berharganya kamu, dan tentang doa-doa baik yang ingin selalu tinggal.
+            </p>
+
+            <div class="envelope" id="envelopeTwo" aria-label="Buka surat kedua">
+              <div class="envelope-base"></div>
+              <div class="flap"></div>
+              <div class="letter">
+                <div class="script">A little more love</div>
+                <strong>Open me, my love 🌷</strong>
+                <small>karena ada banyak hal baik yang ingin disampaikan</small>
+              </div>
+              <div class="wax">💗</div>
+            </div>
+
+            <div class="tap-note">Tap suratnya untuk membuka</div>
+            <div class="btn-row" id="envelopeTwoActions" style="display:none;">
+              <button class="btn" id="openMessageTwoBtn">Baca Isi Surat</button>
+            </div>
+          </div>
+
+          <div class="portrait-frame">
+            <img src="foto3.jpg" alt="Foto berdua" />
+            <div class="note-chip">my favorite kind of home</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="messageTwoSection">
+    <div class="shell">
+      <div class="lux-card message-card">
+        <div class="message-grid">
+          <div class="side-photo">
+            <img src="foto4.jpg" alt="Peranika dan pasangan" />
+            <div class="overlay-note">
+              Di antara banyak hal yang berubah dalam hidup, ada satu hal yang tetap aku syukuri:
+              bisa kenal, dekat, dan punya cerita sama kamu.
+            </div>
+          </div>
+
+          <div class="message-paper">
+            <div class="message-inner">
+              <div class="small-script">A note for your new age</div>
+              <h2>Untuk langkah-langkah kamu ke depan 🌸</h2>
+              <p>Kalau boleh jujur, salah satu hal yang paling aku syukuri adalah bisa kenal dan jalan sejauh ini sama kamu. Kamu punya cara sendiri buat bikin suasana jadi hangat, bikin hal-hal sederhana terasa spesial, dan bikin aku sadar kalau rasa nyaman itu ternyata bisa datang dari seseorang.</p><p>Aku suka cara kamu tersenyum, cara kamu peduli, cara kamu berusaha kuat bahkan di saat lagi capek. Buat aku, kamu itu bukan cuma cantik, tapi juga rumah yang tenang. Dan di umur kamu yang baru ini, aku cuma pengen kamu hidup dengan lebih ringan, lebih bahagia, dan lebih percaya bahwa kamu pantas untuk dicintai sepenuhnya.</p><p>Semoga tahun ini jadi tahun yang lembut buat kamu. Tahun yang isinya lebih banyak tawa daripada air mata, lebih banyak kabar baik daripada rasa cemas, dan lebih banyak pelukan hangat daripada rasa lelah. Aku akan selalu doain yang terbaik buat kamu, dan semoga aku tetap boleh ada di samping kamu untuk ikut merayakan semua hal baik yang datang nanti.</p>
+              <div class="signature">Please stay soft, stay brave, and stay wonderfully you ✨</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn" id="toGalleryBtn">Lihat Kenangan Kita</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallerySection">
+    <div class="shell">
+      <div class="lux-card gallery-shell">
+        <div class="gallery-top">
+          <div class="eyebrow">Memory Pages</div>
+          <h2 class="section-title">Lembaran kenangan yang selalu terasa <span class="script">hangat</span></h2>
+          <p class="lead">
+            Setiap foto punya rasa. Ada yang lucu, ada yang tenang, ada yang sederhana,
+            tapi semuanya selalu berhasil bikin aku bersyukur karena pernah dan masih punya cerita sama kamu.
+          </p>
+        </div>
+
+        <div class="gallery-layout">
+          <div class="gallery-photo">
+            <span class="photo-badge" id="photoBadge">Lembar 1</span>
+            <img id="galleryImage" src="" alt="Kenangan" />
+          </div>
+
+          <div class="gallery-copy">
+            <div class="page-line">
+              <span id="pageLabel">1 / 6</span>
+              <span id="pageTitle">Sorot yang Selalu Menenangkan</span>
+            </div>
+            <div class="progress"><span id="progressFill"></span></div>
+            <h3 id="galleryTitle">Sorot yang Selalu Menenangkan</h3>
+            <p id="galleryCaption"></p>
+
+            <div class="btn-row">
+              <button class="btn secondary" id="prevBtn">Sebelumnya</button>
+              <button class="btn" id="nextBtn">Berikutnya</button>
+            </div>
+
+            <div class="thumbs" id="thumbs"></div>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top: 20px;">
+          <button class="btn secondary" id="toFinalBtn">Lanjut</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="finalSection">
+    <div class="shell">
+      <div class="lux-card final-card">
+        <div class="eyebrow">For the birthday girl</div>
+        <div class="final-big">Happy Birthday,<br />Peranika Cahya</div>
+        <p>
+          Terima kasih karena sudah hadir, tumbuh, bertahan, dan tetap jadi diri kamu yang baik,
+          hangat, dan penuh perhatian. Semoga tahun ini membawa kamu ke lebih banyak senyum,
+          langkah yang ringan, hati yang tenang, dan semua kabar baik yang layak kamu dapatkan.
+          Apa pun yang sedang kamu semogakan, semoga satu per satu datang dengan cara yang paling indah.
+        </p>
+        <div class="footer-love">made with love, only for you ♡</div>
+
+        <div class="btn-row">
+          <button class="btn" id="restartBtn">Lihat Lagi dari Awal</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const sections = {
+      countdown: document.getElementById('countdownSection'),
+      envelopeOne: document.getElementById('envelopeOneSection'),
+      messageOne: document.getElementById('messageOneSection'),
+      envelopeTwo: document.getElementById('envelopeTwoSection'),
+      messageTwo: document.getElementById('messageTwoSection'),
+      gallery: document.getElementById('gallerySection'),
+      final: document.getElementById('finalSection')
+    };
+
+    function showSection(target) {
+      Object.values(sections).forEach(sec => sec.classList.remove('active'));
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const countNumber = document.getElementById('countNumber');
+    let count = 5;
+
+    function runCountdown() {
+      countNumber.textContent = count;
+      const timer = setInterval(() => {
+        count--;
+        if (count > 0) {
+          countNumber.textContent = count;
+          countNumber.style.animation = 'none';
+          void countNumber.offsetWidth;
+          countNumber.style.animation = 'pop 1s ease';
+        } else {
+          countNumber.textContent = '♡';
+          clearInterval(timer);
+          setTimeout(() => showSection(sections.envelopeOne), 1100);
+        }
+      }, 1000);
+    }
+
+    function spawnPetals() {
+      const wrap = document.getElementById('petals');
+      setInterval(() => {
+        const petal = document.createElement('div');
+        petal.className = 'petal';
+        petal.textContent = Math.random() > 0.4 ? '❤' : '✦';
+        petal.style.left = Math.random() * 100 + 'vw';
+        petal.style.animationDuration = (7 + Math.random() * 6) + 's';
+        petal.style.fontSize = (14 + Math.random() * 18) + 'px';
+        wrap.appendChild(petal);
+        setTimeout(() => petal.remove(), 14000);
+      }, 450);
+    }
+
+    const envelopeOne = document.getElementById('envelopeOne');
+    const envelopeTwo = document.getElementById('envelopeTwo');
+
+    envelopeOne.addEventListener('click', () => {
+      envelopeOne.classList.add('open');
+      setTimeout(() => {
+        document.getElementById('envelopeOneActions').style.display = 'flex';
+      }, 750);
+    }, { once: true });
+
+    envelopeTwo.addEventListener('click', () => {
+      envelopeTwo.classList.add('open');
+      setTimeout(() => {
+        document.getElementById('envelopeTwoActions').style.display = 'flex';
+      }, 750);
+    }, { once: true });
+
+    document.getElementById('openMessageOneBtn').addEventListener('click', () => showSection(sections.messageOne));
+    document.getElementById('toEnvelopeTwoBtn').addEventListener('click', () => showSection(sections.envelopeTwo));
+    document.getElementById('openMessageTwoBtn').addEventListener('click', () => showSection(sections.messageTwo));
+    document.getElementById('toGalleryBtn').addEventListener('click', () => showSection(sections.gallery));
+    document.getElementById('toFinalBtn').addEventListener('click', () => showSection(sections.final));
+    document.getElementById('restartBtn').addEventListener('click', () => {
+      count = 5;
+      document.getElementById('envelopeOneActions').style.display = 'none';
+      document.getElementById('envelopeTwoActions').style.display = 'none';
+      envelopeOne.classList.remove('open');
+      envelopeTwo.classList.remove('open');
+      showSection(sections.countdown);
+      setTimeout(runCountdown, 150);
+    });
+
+    const memories = [
+      {
+        title: "Sorot yang Selalu Menenangkan",
+        image: "foto1.jpg",
+        caption: "Senyum kamu selalu punya cara sendiri buat bikin semuanya terasa lebih tenang. Sesederhana itu, tapi selalu berhasil bikin hati ini jatuh cinta lagi."
+      },
+      {
+        title: "Di Antara Kabut, Kita Tetap Ada",
+        image: "foto2.JPG",
+        caption: "Di tengah kabut dan suasana yang sunyi, aku suka cara kita tetap terasa dekat. Kayak dunia boleh samar, tapi perasaan ini tetap jelas."
+      },
+      {
+        title: "Momen Random yang Selalu Manis",
+        image: "foto3.jpg",
+        caption: "Pose random, ekspresi lucu, dan tawa yang nggak dibuat-buat. Justru dari hal-hal kecil begini, aku ngerasa kenangan kita selalu mahal."
+      },
+      {
+        title: "Kamu Bikin Sederhana Jadi Seru",
+        image: "foto4.jpg",
+        caption: "Kamu selalu punya bakat bikin momen biasa jadi lucu dan nggak terlupakan. Bahkan hal receh pun terasa spesial kalau dijalaninnya sama kamu."
+      },
+      {
+        title: "Hal Kecil yang Rasanya Besar",
+        image: "foto5.jpg",
+        caption: "Kadang bukan soal tempat atau suasananya, tapi soal siapa yang ada di samping kita. Dan genggam tangan kamu selalu punya rasa aman yang susah dijelaskan."
+      },
+      {
+        title: "Kalau Dunia Terasa Ramai",
+        image: "foto2.JPG",
+        caption: "Kalau suatu hari nanti dunia terasa terlalu ramai, aku cuma ingin tetap duduk di samping kamu. Sesederhana itu, tapi cukup buat bikin semuanya terasa baik-baik saja."
+      }
+    ];
+
+    const galleryImage = document.getElementById('galleryImage');
+    const galleryTitle = document.getElementById('galleryTitle');
+    const galleryCaption = document.getElementById('galleryCaption');
+    const pageLabel = document.getElementById('pageLabel');
+    const pageTitle = document.getElementById('pageTitle');
+    const photoBadge = document.getElementById('photoBadge');
+    const progressFill = document.getElementById('progressFill');
+    const thumbs = document.getElementById('thumbs');
+    let currentIndex = 0;
+
+    function renderThumbs() {
+      thumbs.innerHTML = '';
+      memories.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.className = 'thumb' + (index === currentIndex ? ' active' : '');
+        button.setAttribute('aria-label', 'Lihat foto ' + (index + 1));
+        button.innerHTML = `<img src="${item.image}" alt="Thumbnail ${index + 1}" />`;
+        button.addEventListener('click', () => {
+          currentIndex = index;
+          updateGallery();
+        });
+        thumbs.appendChild(button);
+      });
+    }
+
+    function updateGallery() {
+      const item = memories[currentIndex];
+      galleryImage.src = item.image;
+      galleryTitle.textContent = item.title;
+      galleryCaption.textContent = item.caption;
+      pageLabel.textContent = `${currentIndex + 1} / ${memories.length}`;
+      pageTitle.textContent = item.title;
+      photoBadge.textContent = `Lembar ${currentIndex + 1}`;
+      progressFill.style.width = `${((currentIndex + 1) / memories.length) * 100}%`;
+      renderThumbs();
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + memories.length) % memories.length;
+      updateGallery();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % memories.length;
+      updateGallery();
+    });
+
+    updateGallery();
+    spawnPetals();
+    runCountdown();
+  </script>
+</body>
+</html>
